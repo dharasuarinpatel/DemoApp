@@ -9,7 +9,7 @@ $scope.selectedLocation="";
     $scope.onSelectedLocation = function(l) {
        $scope.selectedLocation=l;
         console.log(l,$scope.selectedLocation);
-         if(l == "All Classes")
+         if(l == "ALL CLASSES")
        {
            $scope.filteredData=false;
            $scope.allData=true;
