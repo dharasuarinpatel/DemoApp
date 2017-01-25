@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClassRoom Data</title>
+    <link  rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="mainContainer">
+    <header class="header">
+       <h1>Group Exercise Dashboard</h1>
+    </header>
+    <nav class="nav">
+        <ul class="ul">
+            <li class="li" ng-repeat="l in locations | orderBy:l" ng-class="{active : selectedLocation == l}"><a ng-href="#"  ng-click="onSelectedLocation(l)" ><h4 ng-bind="l" ></h4></a></li>
+        </ul>
+    </nav>
+    <section class="mainSection">
+        <section class="countDisplay" ng-show="displayCount">
+            <ul class="ul">
+                <li class="li1"><h2 ng-bind="selectedLocation"></h2></li>
+                <li class="li2"><h4>In Class</h4><h3>{{count}}</h3></li>
+            </ul>
+            </section>
+        <section class="studentsDisplay">
+            <ul class="ul">
+            <li class="li" ng-repeat= " s in students | filter: {program: {name: selectedLocation}} | orderBy :'firstName' " ng-show="filteredData" >
+                <lable><img ng-src = "{{s.imageURL}}"  style="width:80px;height:80px;"></lable>
+                <label> {{s.firstName + " " + s.lastName}}</label>
+                <label>{{s.program.name}}</label>
+            </li>
+
+            <li class="li" ng-repeat= " s in students | orderBy:'firstName'" ng-show="allData">
+                <lable><img ng-src="{{ s.imageURL }}"  style="width:80px;height:80px;"/></lable>
+                <label> {{s.firstName + " " + s.lastName}}</label>
+                <label>{{s.program.name}}</label>
+            </li>
+        </ul>
+        </section>
+    </section>
+</div>
+
+</body>
+</html>
