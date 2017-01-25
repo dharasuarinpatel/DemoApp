@@ -3,7 +3,7 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', ['$scope','$http','$log', function($scope, $http, $log) {
 
-$scope.locations=["CYCLE","SILVER SNEAKERS","All Classes","Class3"];
+$scope.locations=["CYCLE","SILVER SNEAKERS","ALL CLASSES"];
 $scope.selectedLocation="";
  $scope.students=[];
     $scope.onSelectedLocation = function(l) {
