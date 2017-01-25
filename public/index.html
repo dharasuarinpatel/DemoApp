@@ -27,16 +27,9 @@
             </section>
         <section class="studentsDisplay">
             <ul class="ul">
-            <li class="li" ng-repeat= " s in students | filter: {program: {name: selectedLocation}} | orderBy :'firstName' " ng-show="filteredData" >
-                <lable><img ng-src = "{{s.imageURL}}"  style="width:80px;height:80px;"></lable>
-                <label> {{s.firstName + " " + s.lastName}}</label>
-                <label>{{s.program.name}}</label>
-            </li>
-
-            <li class="li" ng-repeat= " s in students | orderBy:'firstName'" ng-show="allData">
-                <lable><img ng-src="{{ s.imageURL }}"  style="width:80px;height:80px;"/></lable>
-                <label> {{s.firstName + " " + s.lastName}}</label>
-                <label>{{s.program.name}}</label>
+            <li class="li" ng-repeat= " s in students | orderBy:'firstName'">
+                <lable class="imageLable"><img class="image" no-image ng-src="{{s.imageURL}}"  onerror="this.src='/images/photo_not_available.png;'"/></lable>
+                <label class="dataLable"><p> {{s.firstName + " " + s.lastName}}</p>  <p>{{s.program.name}}</p></label>
             </li>
         </ul>
         </section>
