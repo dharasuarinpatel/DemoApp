@@ -35,11 +35,10 @@
 			background-color: #61157C;
 			vertical-align: top;
 			height: 5%;
-
-            border-radius: 8px;
-            border-style: solid;
-            border-color: white;
-            border-width: 3px;
+			border-radius: 8px;
+      border-style: solid;
+      border-color: white;
+      border-width: 3px;
 		}
                 .nav .ul{
                     padding: 0.6%;
@@ -62,11 +61,11 @@
                
 		.mainSection{
 			background-color:  #3C3D3C;
-            vertical-align: top;
+      vertical-align: top;
 			text-align: left;
 			padding: 0;
-            margin: 1% 0;
-            position: relative;
+      margin: 1% 0;
+      position: relative;
             
 		}
                 .counterDisplay{
@@ -122,9 +121,28 @@
                             border-color: white;
                             border-width: 3px;
                             margin-top: 0.3%;
-                            float: left;
+                            /*float: left;*/
                             width: 99.5%;
                             text-align: left;
                         }
-    /*@media screen and (min-width: 901px){}*/
+															.studentsDisplay .ul .li .imageLable, .studentsDisplay .ul .li .dataLable{
+																		display: inline-block;
+																		text-align: center;
+																}
+															.imageLable{
+																		margin: 0.2% 0 0 0.2%;
+																		width:80px;
+																							height:80px;
+															}
+																		.imageLable .image{
+																					width:80px;
+																					height:80px;
+																					}
+															.dataLable{
+																	 /*height:80px;*/
+																		vertical-align: top;
+																		margin-left:1%;
+																}
+
+
                 
