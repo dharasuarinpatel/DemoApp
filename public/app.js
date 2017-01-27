@@ -7,6 +7,7 @@ $scope.selectedLocation="";
 $scope.flags = [];
 $scope.locations = ["ALL CLASSES"];
 $scope.result=[];
+$scope.count=0;
 $http({
              method : 'GET',
              headers: {'X-Parse-Application-Id':'LTOTE2KzdaQcrKO0bhanuRROLHxjjxzy8URFzL4U'},
