@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ClassRoom Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js" type="text/javascript"></script>
     <script src="app.js"></script>
@@ -15,25 +16,24 @@
     </header>
     <nav class="nav">
         <ul class="ul">
-            <li class="li" ng-repeat="l in locations | orderBy:l" ng-class="{active : selectedLocation == l}"><a ng-href="#"  ng-click="onSelectedLocation(l)" ><h4 ng-bind="l" ></h4></a></li>
+            <li class="li" ng-repeat="l in locations | orderBy:l" ng-class="{active : selectedLocation == l}">
+                <a ng-href="#"  ng-click="onSelectedLocation(l)"><h4 ng-bind="l"></h4></a>
+            </li>
         </ul>
     </nav>
-    <section class="mainSection">
-        <section class="countDisplay" ng-show="displayCount">
-            <ul class="ul">
-                <li class="li1"><h2 ng-bind="selectedLocation"></h2></li>
-                <li class="li2"><h4>In Class</h4><h3>{{count}}</h3></li>
-            </ul>
-            </section>
+    <section class="countDisplay" ng-show="displayCount">
+        <div class="li1"><h2 ng-bind="selectedLocation"></h2></div>
+        <div class="li2"><h4>In Class</h4><h3>{{count}}</h3></div>
+    </section>
         <section class="studentsDisplay">
             <ul class="ul">
             <li class="li" ng-repeat= " s in students | orderBy:'firstName'">
                 <lable class="imageLable"><img class="image" no-image ng-src="{{s.imageURL}}"  onerror="this.src='/images/photo_not_available.png;'"/></lable>
-                <label class="dataLable"><p> {{s.firstName + " " + s.lastName}}</p>  <p>{{s.program.name}}</p></label>
+                <label class="dataLable"><h3>{{s.firstName + " " + s.lastName}}</h3><h4>{{s.program.name}}</h4></label>
             </li>
         </ul>
         </section>
-    </section>
+    
 </div>
 
 </body>
