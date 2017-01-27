@@ -11,6 +11,25 @@
 		h1,h2,h3,h4,h5,h6{
 			margin: 0 auto;
 		}
+         h1{
+			font-size:1.3em;
+		}
+        h2{
+           font-size: 1.1em;
+        }
+        h3{
+            font-size: 1em;
+        }
+        h4{
+            font-size: 0.8em;
+        }
+        h5{
+            font-size: .73em;
+        }
+        h6{
+            font-size: .67em;
+        }
+        
 		a{
 			text-decoration: none;
             color: white;
@@ -28,85 +47,77 @@
 			width: 95%;
 		}
 		.header{
-			padding: 1.4% 0;
-            /*height: 5%;*/
+			padding: 4% 0;
 		}
 		.nav{
 			background-color: #61157C;
 			vertical-align: top;
-			height: 5%;
-			border-radius: 8px;
-      border-style: solid;
-      border-color: white;
-      border-width: 3px;
+            border-radius: 0.3em;
+            border-style: solid;
+            border-color: white;
+            border-width: 0.16em;
 		}
                 .nav .ul{
-                    padding: 0.6%;
+                    padding: 0.8%;
                     margin: 0;
                     text-align: left;
                 }
                 .nav .ul .li{
-                    padding: 0 0.5%;
-                    margin: 0;
+                    padding: 0 2% 0;
                     display: inline-block;
                     border-right-style: solid;
                     border-right-width: 1px;
                     padding-top: 0.1%;
                 }
+                .nav .ul .li:last-child 
+                { border-right:0px;
+                padding-right: 0px; }
+				.nav .ul .li a h4{
+                    padding:0.1em 0;
+					
+				}
                 .active{
                     border-bottom: solid;
                     border-bottom-color: #00A5A8;
                     border-bottom-width: 0.1%;
                 }
                
-		.mainSection{
-			background-color:  #3C3D3C;
-      vertical-align: top;
-			text-align: left;
+        .countDisplay{
+            background-color:  #3C3D3C;
+			text-align: center;
 			padding: 0;
-      margin: 1% 0;
-      position: relative;
-            
-		}
-                .counterDisplay{
-                    width:100%;
-                    height: 14%;
-                }
-                        .countDisplay .ul{
-                            padding: 0;
-                            margin: 0;
-                            text-align: left;
-                        }
-                        .countDisplay .ul .li1, .countDisplay .ul .li2{
-                            display: inline-block;
+            margin: 0 auto;
+            margin-top: 1.3% ;
+            width:100%;
+            height: 4em;
+            display: table;
+            border-collapse: separate;
+
+         }
+                        .countDisplay .li1, .countDisplay .li2{
+                            display: table-cell;
                             background-color: #FF545F;
-                            vertical-align: top;
-                            margin: 0;
                             text-align: center;
-                            
-                            border-radius: 8px;
+                            border-radius: 0.3em;
                             border-style: solid;
                             border-color: white;
-                            border-width: 3px;
-                            /*width:49%;*/
+                            border-width: 0.16em;
+                            vertical-align: middle;
                         }
-                        .countDisplay .ul .li1{
+                        .countDisplay .li1{
+                            text-align: center;
                             width: 70%;
-                            height: 100%;
-                            padding:1.4% 0;
+                            margin-right: 0.9%;
                         }
-                        .countDisplay .ul .li2{
-                            width: 28.5%;
-                            height: 100%;
-                            margin-left: 0.1%;
-                            padding:1% 0;
+                        .countDisplay .li2{
+                            width: 30%;
+                            margin-left: 1%;
                         }
                 .studentsDisplay{
                     vertical-align: top;
-                    text-align: center;
+                    text-align: left;
                     width:100%;
-                    margin: 0;
-                    position: relative;
+                    margin-top: 0.2%;
                 }
                         .studentsDisplay .ul{
                             padding:0;
@@ -115,34 +126,92 @@
                         }
                         .studentsDisplay .ul .li{
                             background-color: #00A5A8;
-                            /*display: inline-block;*/
-                            border-radius: 8px;
+                            border-radius: 0.3em;
                             border-style: solid;
                             border-color: white;
-                            border-width: 3px;
-                            margin-top: 0.3%;
-                            /*float: left;*/
-                            width: 99.5%;
+                            border-width: 0.16em;
+                            margin-top: 1.2%;
                             text-align: left;
+                            height:60px;
                         }
-															.studentsDisplay .ul .li .imageLable, .studentsDisplay .ul .li .dataLable{
-																		display: inline-block;
-																		text-align: center;
-																}
-															.imageLable{
-																		margin: 0.2% 0 0 0.2%;
-																		width:80px;
-																							height:80px;
-															}
-																		.imageLable .image{
-																					width:80px;
-																					height:80px;
-																					}
-															.dataLable{
-																	 /*height:80px;*/
-																		vertical-align: top;
-																		margin-left:1%;
-																}
+						.studentsDisplay .ul .li .imageLable, .studentsDisplay .ul .li .dataLable{
+							display: inline-block;
+							text-align: center;
+						}
+						.imageLable{
+							width:60px;
+                            text-align: center;
+                             margin:0;
+                            padding: 0;
+						}
+                        .imageLable .image{
+                            width:60px;
+                            height:60px;
+                            vertical-align: bottom;
+                        }
+						.dataLable{
+							vertical-align: bottom;
+                            /*padding-top:3%;*/
+							margin-left:1%;
+						}
+@media screen and (min-width: 601px){
+        h1{
+			font-size:2em;
+		}
+        h2{
+           font-size: 1.5em; 
+        }
+        h3{
+            font-size: 1.17em;
+        }
+        h4{
+            font-size: 1em;
+        }
+        h5{
+            font-size: .83em;
+        }
+        h6{
+            font-size: .67em;
+        }
+    .header{
+			padding: 1.4% 0;
+		}
+    .nav{
+            border-radius: 0.45em;
+            border-width: 0.2em;
+		}
+                .nav .ul{
+                    padding: 0.5%;
+                }
+                .nav .ul .li{
+                    padding: 0 0.5%;
+                    padding-top: 0.1%;
+                }
+     .countDisplay{
+            margin-top: 0.8%;
+            height: 4.8em;
+      }
+    .countDisplay .li1, .countDisplay .li2{
+            border-radius: 0.45em;
+            border-width: 0.2em;
+    }
+                        
+            
+    .studentsDisplay .ul .li{
+            border-radius: 0.45em;
+            border-width: 0.2em;
+            margin-top: 0.12em;
+            height:4.7em;
+    }
+						
+	.imageLable .image{
+            width:4.7em;
+            height:4.7em;
+    }
+	.dataLable{
+			vertical-align: bottom;
+			margin-left:2%;
+	}
+}
 
-
-                
+            
