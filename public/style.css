@@ -136,7 +136,6 @@
                         }
 						.studentsDisplay .ul .li .imageLable, .studentsDisplay .ul .li .dataLable{
 							display: inline-block;
-							text-align: center;
 						}
 						.imageLable{
 							width:60px;
@@ -151,6 +150,7 @@
                         }
 						.dataLable{
 							vertical-align: bottom;
+                            text-align: left;
                             /*padding-top:3%;*/
 							margin-left:1%;
 						}
