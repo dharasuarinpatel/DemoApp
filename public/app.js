@@ -3,22 +3,34 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', ['$scope','$http','$log', function($scope, $http, $log) {
 
-$scope.locations=["CYCLE","SILVER SNEAKERS","ALL CLASSES"];
 $scope.selectedLocation="";
-$scope.count=0;
-
-    $scope.onSelectedLocation = function(l) {
-        $scope.students=[];
-        $scope.result=[];
-        $scope.selectedLocation=l;
-
-         $http({
+$scope.flags = [];
+$scope.locations = ["ALL CLASSES"];
+$scope.result=[];
+$http({
              method : 'GET',
              headers: {'X-Parse-Application-Id':'LTOTE2KzdaQcrKO0bhanuRROLHxjjxzy8URFzL4U'},
              url : 'https://web.alariscloud.com/parse/classes/Dashboard'
          })
         .then(function (response) {
              $scope.result = response.data.results;
+             $log.log($scope.result);
+             $scope.arraylength = $scope.result.length;
+            for(var i=0; i<$scope.arraylength; i++) {
+                if( $scope.flags[$scope.result[i].program.name]) continue;
+                $scope.flags[$scope.result[i].program.name] = true;
+                $scope.locations.push($scope.result[i].program.name);
+            }   
+        },function(err){
+                $scope.error = err.statusText || "Request Failed!";
+                alert("Error" + err.status + err.statusText + $scope.error);
+                alert(err);
+        });
+
+        $scope.onSelectedLocation = function(l) {
+        $scope.students=[];
+        $scope.selectedLocation=l;
+
              if ($scope.selectedLocation == "ALL CLASSES"){
                     $scope.students=$scope.result;
                     $scope.count=$scope.students.length;
@@ -37,13 +49,7 @@ $scope.count=0;
                     $scope.count=$scope.students.length;
                 }
         $scope.displayCount=true; 
-        },function(err){
-                $scope.error = err.statusText || "Request Failed!";
-                alert("Error" + err.status + err.statusText + $scope.error);
-                alert(err);
-        });
-
-    };
+        };
 
 
 }]);
