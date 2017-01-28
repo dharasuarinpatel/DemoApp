@@ -134,26 +134,33 @@
                             text-align: left;
                             height:60px;
                         }
-						.studentsDisplay .ul .li .imageLable, .studentsDisplay .ul .li .dataLable{
+						.studentsDisplay .ul .li .imageLabel, 
+                        .studentsDisplay .ul .li .dataLabel, 
+                        .studentsDisplay .ul .li .timeLabel{
 							display: inline-block;
 						}
-						.imageLable{
+						.imageLabel{
 							width:60px;
                             text-align: center;
                              margin:0;
                             padding: 0;
 						}
-                        .imageLable .image{
+                        .imageLabel .image{
                             width:60px;
                             height:60px;
                             vertical-align: bottom;
                         }
-						.dataLable{
+						.dataLabel{
 							vertical-align: bottom;
                             text-align: left;
                             /*padding-top:3%;*/
 							margin-left:1%;
 						}
+                        .timeLabel{
+                            margin-top:4%; 
+                            text-align: center;
+                            float:right;
+                        }
 @media screen and (min-width: 601px){
         h1{
 			font-size:2em;
@@ -204,11 +211,11 @@
             height:4.7em;
     }
 						
-	.imageLable .image{
+	.imageLabel .image{
             width:4.7em;
             height:4.7em;
     }
-	.dataLable{
+	.dataLabel{
 			vertical-align: bottom;
 			margin-left:2%;
 	}
