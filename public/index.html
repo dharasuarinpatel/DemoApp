@@ -28,9 +28,10 @@
         <section class="studentsDisplay">
             <ul class="ul">
             <li class="li" ng-repeat= " s in students | orderBy:['program.name','firstName']">
-                <lable class="imageLable"><img class="image" no-image ng-src="{{s.imageURL}}"  onerror="this.src='/images/photo_not_available.png;'"/></lable>
-                <label class="dataLable"><h3>{{s.firstName + " " + s.lastName}}</h3><br>
-                                        <h4>{{s.program.name}}</h4></label>
+                <span class="imageLabel"><img class="image" no-image ng-src="{{s.imageURL}}" /></span>
+                <span class="dataLabel"><h3>{{s.firstName + " " + s.lastName}}</h3><br>
+                                        <h4>{{s.program.name}}</h4></span>
+                <span class="timeLabel"><h4>{{s.createdAt | date : 'shortTime' : -0700}}</h4></span>
             </li>
             </ul>
         </section>
