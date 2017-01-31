@@ -11,7 +11,7 @@ $scope.count=0;
 $http({
              method : 'GET',
              headers: {'X-Parse-Application-Id':'LTOTE2KzdaQcrKO0bhanuRROLHxjjxzy8URFzL4U'},
-             url : 'https://web.alariscloud.com/parse/classes/Dashboard'
+             url : 'https://web.alariscloud.com/parse/classes/Dashboard?limit=1000'
          })
         .then(function (response) {
              $scope.result = response.data.results;
